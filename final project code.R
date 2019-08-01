@@ -1,5 +1,5 @@
 ######## Final Project - Forecasting Uber rentals in NYSE area, September 2014 ########
-###Lahav Ezer & Ron Levy###
+###Ron Levy###
 ####### PART 1 #######
 #1. Rearrangment of our data set
 setwd("~/Downloads/uber_train")
@@ -188,11 +188,11 @@ by(uber_train$number_of_pickups, uber_train$Rain,sum)
 cor(uber_train$number_of_pickups, uber_train$bikes_pickups)
 
 
-####δΰν ιω δαγμ αιο ιεν ηεμ μρετω?####
+####Γ€Γ Γ­ Γ©ΓΉ Γ€Γ‘Γ£Γ¬ Γ‘Γ©Γ― Γ©Γ₯Γ­ Γ§Γ₯Γ¬ Γ¬Γ±Γ₯Γ΄ΓΉ?####
 uber_train$wday_bin = ifelse(uber_train$wDay=="weekend", 0,1)
 t.test(number_of_pickups~wday_bin,uber_train)
 
-#### δδαγμ αιο ιεν ηεμ μρετω ξεαδχ####
+#### Γ€Γ€Γ‘Γ£Γ¬ Γ‘Γ©Γ― Γ©Γ₯Γ­ Γ§Γ₯Γ¬ Γ¬Γ±Γ₯Γ΄ΓΉ Γ®Γ₯Γ‘Γ€Γ·####
 
 #####create weekend data###
 uber_train_weekend = uber_train[which(uber_train$wDay=='weekend'),]
@@ -201,23 +201,23 @@ uber_train_weekend = uber_train[which(uber_train$wDay=='weekend'),]
 uber_train_weekday = uber_train[which(uber_train$wDay=='weekday'),]
 
 
-####δωλψεϊ ΰετπιιν μτι ωςδ###
+####Γ€ΓΉΓ«ΓΈΓ₯ΓΊ Γ Γ₯Γ΄Γ°Γ©Γ©Γ­ Γ¬Γ΄Γ© ΓΉΓ²Γ€###
 bikes= rbind(by(uber_train_weekday$bikes_pickups, uber_train_weekday$hour, mean),
              by(uber_train_weekend$bikes_pickups, uber_train_weekend$hour, mean))
 
 barplot(bikes,beside=T,col=c("green"
-                             ,"blue"), main = "δωλψεϊ ΰετπιιν μτι ωςδ")
-legend("topleft",c("ιεν ηεμ", "ρετω"),
+                             ,"blue"), main = "Γ€ΓΉΓ«ΓΈΓ₯ΓΊ Γ Γ₯Γ΄Γ°Γ©Γ©Γ­ Γ¬Γ΄Γ© ΓΉΓ²Γ€")
+legend("topleft",c("Γ©Γ₯Γ­ Γ§Γ₯Γ¬", "Γ±Γ₯Γ΄ΓΉ"),
        fill = c("green","blue"))
 
 
-######ωιξεω μτι ωςδ- uber#####
+######ΓΉΓ©Γ®Γ₯ΓΉ Γ¬Γ΄Γ© ΓΉΓ²Γ€- uber#####
 uber_use= rbind(by(uber_train_weekday$number_of_pickups, uber_train_weekday$hour, mean),
                 by(uber_train_weekend$number_of_pickups, uber_train_weekend$hour, mean))
 
 barplot(uber_use,beside=T,col=c("green"
-                                ,"blue"), main = "uber- ωιξεω μτι ωςδ")
-legend("topleft",c("ιεν ηεμ", "ρετω"),
+                                ,"blue"), main = "uber- ΓΉΓ©Γ®Γ₯ΓΉ Γ¬Γ΄Γ© ΓΉΓ²Γ€")
+legend("topleft",c("Γ©Γ₯Γ­ Γ§Γ₯Γ¬", "Γ±Γ₯Γ΄ΓΉ"),
        fill = c("green","blue"))
 
 
