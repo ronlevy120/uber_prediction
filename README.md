@@ -18,3 +18,17 @@ C. External data source – I used data of bikes rentals and train transporation
 2. Exploratory Analysis -presenting and explaining descriptive statistics
 3. Model Estimation
 4. Predictions
+
+# attached:
+- uber_train dataset
+- uber_test dataset
+- final project doc (Hebrew)
+* the bikes rentals and trains dataset are to heavy.
+you can download the bikes dataset here:
+https://data.world/citibikenyc/citibike-tripdata-september-2014
+
+for he trains data: 
+https://www.kaggle.com/new-york-state/nys-turnstile-usage-data
+
+for further questions:
+ronlevy12000@gmail.com
