@@ -13,6 +13,6 @@ the model i created.
 
 # This work was divided into 4 parts:
 1. Data Rearrangement - cleaning and organizing the data
-2.Exploratory Analysis -presenting and explaining descriptive statistics
+2. Exploratory Analysis -presenting and explaining descriptive statistics
 3. Model Estimation
-4.Predictions
+4. Predictions
