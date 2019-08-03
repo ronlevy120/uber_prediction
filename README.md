@@ -7,8 +7,10 @@ of hour, during the last week of September 2014.
 A. uber_train - This is the fundamental data I analyzed and use for modeling. This
 file contains data on over 4.5 million Uber pickups in New York City from April to September
 2014.
+
 B. uber_test - For the list of time intervals in this data,I made my predictions, based on
 the model i created.
+
 C. External data source – I used data of bikes rentals and train transporation in NYC
 
 # This work was divided into 4 parts:
